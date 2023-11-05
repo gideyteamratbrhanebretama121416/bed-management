@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('rented_rooms', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('room_id')->constrained('rooms')->onDelete('cascade');
-            $table->string('customer_name', 50);
-            $table->string('id_number', 30);
-            $table->timestamps();
+        Schema::table('rooms', function (Blueprint $table) {
+            $table->enum('status', ['Free', 'Rented', 'Unavailable'])->default('Free');
         });
     }
 
@@ -25,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('rented_rooms');
+        Schema::table('rooms', function (Blueprint $table) {
+            $table->dropColumn('status');
+        });
     }
 };
