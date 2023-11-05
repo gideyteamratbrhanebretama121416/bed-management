@@ -21,4 +21,9 @@ class EditRole extends EditRecord
     {
         return 'Role Updated';
     }
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }

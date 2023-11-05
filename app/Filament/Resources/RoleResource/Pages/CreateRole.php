@@ -14,6 +14,11 @@ class CreateRole extends CreateRecord
 {
     return 'Role registered';
 }
+
+protected function getRedirectUrl(): string
+{
+    return $this->getResource()::getUrl('index');
+}
 }
 
 

@@ -21,7 +21,8 @@ class RoomResource extends Resource
 {
     protected static ?string $model = Room::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-user-group';
+    protected static ?string $navigationIcon = 'heroicon-o-at-symbol';
+    protected static ?string $navigationGroup = 'Configurations';
 
     public static function form(Form $form): Form
     {

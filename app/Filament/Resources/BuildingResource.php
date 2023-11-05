@@ -20,6 +20,8 @@ class BuildingResource extends Resource
     protected static ?string $model = Building::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
+    protected static ?string $navigationGroup = 'Configurations';
+
 
     public static function form(Form $form): Form
     {
