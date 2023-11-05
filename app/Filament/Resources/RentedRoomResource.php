@@ -59,7 +59,7 @@ class RentedRoomResource extends Resource
                 TextColumn::make('room.name')->label('Room'),
                 TextColumn::make('room.floor.name')->label('Floor'),
                 TextColumn::make('room.floor.building.name')->label('Building'),
-                TextColumn::make('room.price')->label('Price'),
+                TextColumn::make('price')->label('Price'),
                 TextColumn::make('rented_date')->label('Rented date'),
                 TextColumn::make('customer_name')->label('Customer name'),
                 TextColumn::make('id_number')->label('Id number'),

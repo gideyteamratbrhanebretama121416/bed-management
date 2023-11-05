@@ -6,6 +6,8 @@ use App\Filament\Resources\RentedRoomResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 use Filament\Pages\Actions\CreateAction;
+use Illuminate\Contracts\View\View;
+
 
 class ListRentedRooms extends ListRecords
 {
@@ -22,5 +24,11 @@ class ListRentedRooms extends ListRecords
     {
         return [
         ];
+    }
+
+
+    protected function getFooter(): ?View
+    {
+        return view('rented-room-footer');
     }
 }
