@@ -31,7 +31,7 @@ class RoomResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
+            ->schema([   
                 Select::make('floor_id')
                 ->label('Floor')
                 ->options(Floor::all()->pluck('name', 'id'))
